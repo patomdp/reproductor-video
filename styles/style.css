@@ -1,0 +1,56 @@
+@import './buttons.css';
+
+body {
+    background-color: #26b4bc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    max-inline-size: 900px; /*el wrapper es el encargado de controlar el max size*/
+    margin: auto; /*para centrarlo verticalmente*/
+}
+
+.player{
+    margin-block-start: 100px; /*Para darle margin top*/
+    position: relative; /*El contenedor es el padre y le va a dar referencia de posicion a los hijos*/
+    border: tomato solid 10px;
+    background-color: black;
+}
+.player video{
+    inline-size: 100%;
+    aspect-ratio: 16/9; /*para que el banner se vea bien siempre*/
+    vertical-align: middle; /*para alinear*/
+}
+
+.player-title{
+    position: absolute;
+    color: white;
+    margin: 0; /*Se le quita el margen que viene por defecto*/
+    inset-block-start: 20px; /*Block es en Y . con respecto al relativo, en este caso el padre*/
+    inset-inline-start: 20px; /*en el eje X*/
+}
+
+.player-actions{
+    position: absolute;
+    inset: 0;
+    /* border: rgb(75, 123, 255) solid 10px; */
+    /*Como el padre es relativo, le puedo poner inset 0 para que tome su tamaño*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* z-index: 2; */
+
+}
+
+.player-progress{
+    /* background: yellow; */
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    display: flex;
+    padding: 0.9em;
+}
+.player-progress input{
+    flex: 1; /*ver que hace esto*/
+ 
+}

@@ -1,0 +1,30 @@
+.button {
+ inline-size: 34px;
+ block-size: 34px;
+ border: none;
+ background-color: transparent; /*tambien puede ser unset o initial*/
+ background-repeat: no-repeat; /*por que se puso como bg img*/
+ background-position: center;
+ cursor: pointer;
+}
+
+.button:active{
+    transform: scale(.9);
+}
+
+#play {
+    background-image: url(../images/play.svg);
+}
+
+#pause{
+
+    background-image: url(../images/pause.svg);
+}
+
+#backward{
+    background-image: url(../images/-10.svg);
+}
+
+#forward{
+    background-image: url(../images/+10.svg);
+}
