@@ -36,3 +36,25 @@ function handleBackward(){
     handlePlay();
 }
 
+
+const $progress = document.querySelector('#progress')
+$video.addEventListener('loadedmetadata', handleLoaded) //Esto se hace para saber la duracion del video una vez que cargue
+$video.addEventListener('timeupdate', handleTimeUpdate) //Para saber el tiempo de progreso del video
+
+function handleLoaded(){
+    $progress.max = $video.duration
+    console.log('Ha cargado mi video', $video.duration)
+}
+
+function handleTimeUpdate(){
+    //Cada vez que se actualiza el tiempo quiero que se mueva el range
+    $progress.value = $video.currentTime
+    // console.log('Tiempo actual', $video.currentTime)
+}
+
+$progress.addEventListener('input', handleInput)
+
+function handleInput(){
+    console.log($progress.value)//va a decir en que valor estoy
+    $video.currentTime = $progress.value //Al reves que lo anterior, el progress se lo asigno al video
+}

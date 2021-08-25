@@ -12,17 +12,22 @@
     <div class="wrapper">
 
         <div class="player">
-            <video id="video" poster="./images/poster.jpg" muted controls src="./videos/lofi.mp4" width="400px"></video>
-            <!-- se le quita autoplay y controls-->
-            <h2 class="player-title">Música para programar</h2>
-            <div class="player-actions">
-                <button class="button" id="backward" aria-label="Botón Retroceder 10 segundos" title="Botón Retroceder 10 segundos"></button>
-                <button class="button" id="play" aria-label="Botón play" title="Botón play"></button>
-                <button class="button" id="pause" aria-label="Botón Pausa" title="Botón pausa" hidden></button>
-                <button class="button" id="forward" aria-label="Botón adelantar 10 segundos" title="Botón adelantar 10 segundos"></button>
-            </div>
-            <div class="player-progress">
-                <input type="range">
+            <video id="video" poster="./images/poster.jpg" src="./videos/lofi.mp4" width="400px"></video>
+            <!-- se le quita autoplay muted y controls-->
+            
+            <div class="player-overlay">
+                <h2 class="player-title">Música para programar</h2>
+                
+                <div class="player-actions">
+                    <button class="button" id="backward" aria-label="Botón Retroceder 10 segundos" title="Botón Retroceder 10 segundos"></button>
+                    <button class="button" id="play" aria-label="Botón play" title="Botón play"></button>
+                    <button class="button" id="pause" aria-label="Botón Pausa" title="Botón pausa" hidden></button>
+                    <button class="button" id="forward" aria-label="Botón adelantar 10 segundos" title="Botón adelantar 10 segundos"></button>
+                </div>
+                <div class="player-progress">
+                    <input id="progress" type="range" min="0" value="0" step="1">
+    
+                </div>
 
             </div>
         </div>

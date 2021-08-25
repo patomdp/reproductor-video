@@ -13,13 +13,14 @@ body {
 .player{
     margin-block-start: 100px; /*Para darle margin top*/
     position: relative; /*El contenedor es el padre y le va a dar referencia de posicion a los hijos*/
-    border: tomato solid 10px;
+    /* border: tomato solid 10px; */
     background-color: black;
 }
 .player video{
     inline-size: 100%;
     aspect-ratio: 16/9; /*para que el banner se vea bien siempre*/
     vertical-align: middle; /*para alinear*/
+    object-fit: cover;
 }
 
 .player-title{
@@ -38,6 +39,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     /* z-index: 2; */
 
 }
@@ -53,4 +55,20 @@ body {
 .player-progress input{
     flex: 1; /*ver que hace esto*/
  
+}
+
+
+.player-overlay{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+
+.player:hover .player-overlay{
+    /* border: tomato solid 10px; */
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.479);
+    transition: .3s opacity;
+
 }
