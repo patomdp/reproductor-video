@@ -1,7 +1,8 @@
 @import './buttons.css';
 
 body {
-    background-color: #26b4bc;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -11,7 +12,7 @@ body {
 }
 
 .player{
-    margin-block-start: 100px; /*Para darle margin top*/
+    margin-block-start: 3em; /*Para darle margin top*/
     position: relative; /*El contenedor es el padre y le va a dar referencia de posicion a los hijos*/
     /* border: tomato solid 10px; */
     background-color: black;
@@ -68,7 +69,9 @@ body {
 .player:hover .player-overlay{
     /* border: tomato solid 10px; */
     opacity: 1;
-    background-color: rgba(0, 0, 0, 0.479);
+    background-color: rgba(9,9,121,0.4);
+    /* background-color: rgba(0, 0, 0, 0.479); */
+    
     transition: .3s opacity;
 
 }
